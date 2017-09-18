@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+	<title>fullscreen</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet">
+	<style>
+	body {
+		font-family: "Source Sans Pro", sans-serif;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0;
+	}
+
+	div#container {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	div#text {
+		text-align: center;
+		font-weight: 600;
+		padding: 20px;
+	}
+
+	div#text:empty:before {
+		content: "Click.";
+	}
+
+	div#text:empty:focus:before {
+		content: " ";
+	}
+
+	div#text:focus {
+		outline: 0;
+	}
+
+	@media (max-width: 576px) {
+		div#text {
+			font-size: 20vw;
+			margin-bottom: 12vw;
+		}
+	}
+	@media (min-width: 576px) {
+		div#text {
+			font-size: 15vw;
+			margin-bottom: 9vw;
+		}
+	}
+	@media (min-width: 768px) {
+		div#text {
+			font-size: 10vw;
+			margin-bottom: 6vw;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="text" contenteditable="true"></div>
+	</div>
+</body>
